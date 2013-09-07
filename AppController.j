@@ -81,7 +81,7 @@
 
 	// Explanation text box
 	var descriptionLabel = [[CPTextField alloc] initWithFrame:CGRectMake(30, 300, 350, 50)];
-	[descriptionLabel setStringValue:@"Drag any file(s) (less than 1 MB) to the square above.  This currently works in Safari and Chrome.  Firefox support is possible, but not implemented."];
+	[descriptionLabel setStringValue:@"Drag an image (less than 1 MB) to the square above.  This currently works in Safari and Chrome.  Firefox support is possible, but not implemented."];
 	[descriptionLabel setFont:[CPFont systemFontOfSize:12.0]];
 	[descriptionLabel setLineBreakMode:CPLineBreakByWordWrapping];
 	[contentView addSubview:descriptionLabel];

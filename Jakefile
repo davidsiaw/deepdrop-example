@@ -1,6 +1,6 @@
 /*
  * Jakefile
- * InvPick
+ * DeepDrop
  *
  * Created by You on August 28, 2013.
  * Copyright 2013, Your Company All rights reserved.
@@ -14,7 +14,7 @@ var ENV = require("system").env,
     app = require("cappuccino/jake").app,
     configuration = ENV["CONFIG"] || ENV["CONFIGURATION"] || ENV["c"] || "Debug",
     OS = require("os"),
-    projectName = "InvPick";
+    projectName = "DeepDrop";
 
 app (projectName, function(task)
 {
@@ -23,15 +23,15 @@ app (projectName, function(task)
     if (configuration === "Debug")
         ENV["OBJJ_INCLUDE_PATHS"] = FILE.join(ENV["OBJJ_INCLUDE_PATHS"], configuration);
 
-    task.setBuildIntermediatesPath(FILE.join("Build", "InvPick.build", configuration));
+    task.setBuildIntermediatesPath(FILE.join("Build", "DeepDrop.build", configuration));
     task.setBuildPath(FILE.join("Build", configuration));
 
-    task.setProductName("InvPick");
-    task.setIdentifier("com.yourcompany.InvPick");
+    task.setProductName("DeepDrop");
+    task.setIdentifier("com.yourcompany.DeepDrop");
     task.setVersion("1.0");
     task.setAuthor("Your Company");
     task.setEmail("feedback @nospam@ yourcompany.com");
-    task.setSummary("InvPick");
+    task.setSummary("DeepDrop");
     task.setSources(new FileList("**/*.j").exclude(FILE.join("Build", "**")).exclude(FILE.join("Frameworks", "Source", "**")));
     task.setResources(new FileList("Resources/**"));
     task.setIndexFilePath("index.html");
@@ -91,7 +91,7 @@ task ("desktop", ["release"], function()
 
 task ("run-desktop", ["desktop"], function()
 {
-    OS.system([FILE.join("Build", "Desktop", projectName, "InvPick.app", "Contents", "MacOS", "NativeHost"), "-i"]);
+    OS.system([FILE.join("Build", "Desktop", projectName, "DeepDrop.app", "Contents", "MacOS", "NativeHost"), "-i"]);
 });
 
 function printResults(configuration)
