@@ -12,10 +12,17 @@ if ($file->size > 1000000)
 }
 else
 {
+	$filenames = glob('Content/Uploads/*'); // get all file names
+	foreach($filenames as $filename){ // iterate files
+	  if(is_file($filename))
+	    unlink($filename); // delete file
+	}
+
+
 	// if everything is ok, save the file somewhere
 	$storage = "Content/Uploads/";
 	if (file_exists($storage)) {
-		$unique = "thefile";
+		$unique = $file->name;
 
 		$path = $storage . $unique;
 

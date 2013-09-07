@@ -113,7 +113,7 @@
 - (void)fileUploadManager:(DCFileUploadManager)theManager uploadDidFinish:(DCFileUpload)theFileUpload
 {
 	[dropView setImage:[[CPImage alloc]
-	 initWithContentsOfFile:"Content/Uploads/thefile" size:CPSizeMake(200, 200)]];
+	 initWithContentsOfFile:"Content/Uploads/" + [theFileUpload name] size:CPSizeMake(200, 200)]];
 }
 
 - (void)gitHubAction {
