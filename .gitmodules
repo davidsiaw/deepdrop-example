@@ -1,0 +1,3 @@
+[submodule "Frameworks"]
+	path = Frameworks
+	url = https://github.com/davidsiaw/cappuccino-frameworks.git
